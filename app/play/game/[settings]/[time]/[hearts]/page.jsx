@@ -236,8 +236,6 @@ export default function Home(props) {
 
   React.useEffect(()=>{
 
-    console.log(localStorage.getItem('best'));
-
     const timeend3 = new Date();
     const seconds3 = (timeend3.getTime() - TimeStart.current.getTime()) / 1000;
     SetScore(old=> old - parseInt(seconds3));
@@ -251,7 +249,7 @@ export default function Home(props) {
       mode: ModeName.toString()
     }));
 
-    if (ScoreRef.current > parseInt(JSON.parse(localStorage.getItem('best')).score) || JSON.parse(localStorage.getItem('best')).time === '') {
+    if (ScoreRef.current > parseInt(JSON.parse(localStorage.getItem('best')).score) || JSON.parse(localStorage.getItem('best')).score === null) {
       localStorage.setItem('best', JSON.stringify(
       {
         time: (TimeStamp.current).toString(),
