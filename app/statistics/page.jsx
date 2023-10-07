@@ -5,6 +5,23 @@ import Link from 'next/link';
 
 const page = () => {
 
+    const [current, SetCurrent] = React.useState('');
+    const [best, SetBest] = React.useState('');
+      
+    React.useEffect(() => {
+
+        const localStorageCurrent = localStorage.getItem('current');
+        if (localStorageCurrent) {
+        SetCurrent(JSON.parse(localStorageCurrent));
+        }
+
+        const localStorageBest = localStorage.getItem('best');
+        if (localStorageBest) {
+        SetBest(JSON.parse(localStorageBest));
+        }
+
+    }, []);
+
   return (
     <div className='leaderpage page'>
 
@@ -24,7 +41,7 @@ const page = () => {
                     <div className='topcolumn'><i className="fa-solid fa-thumbs-down"></i></div>
                 </div>
 
-                <Row data={JSON.parse(localStorage.getItem('current'))}/>
+                <Row data={current}/>
 
             </div>
 
@@ -40,7 +57,7 @@ const page = () => {
                     <div className='topcolumn'><i className="fa-solid fa-thumbs-down"></i></div>
                 </div>
 
-                <Row data={JSON.parse(localStorage.getItem('best'))}/>
+                <Row data={best}/>
 
             </div>
 
