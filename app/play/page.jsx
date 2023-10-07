@@ -16,24 +16,24 @@ export default function Home() {
     };
 
 return (
-<div className="mainpage page">
+    <div className="mainpage page">
 
-    <h1 className="toptitle">Settings</h1>
-    
-    <Settings submitHandler={submitHandler}/>
-
-    <div className="playboxes">
-
-        <Link href="/" className="playbox">
-            <i className='fa-solid fa-house'></i>
-        </Link>
-
-        <Link href={`/play/game/${FirstUrl}/${SecondUrl}/${ThirdUrl}`} className="playbox">
-            <i className='fa-solid fa-play'></i>
-        </Link>
+        <h1 className="toptitle">Settings</h1>
         
-    </div>
+        <Settings submitHandler={submitHandler}/>
 
-</div>
+        <div className="playboxes">
+
+            <Link href="/" className="playbox">
+                <i className='fa-solid fa-house'></i>
+            </Link>
+
+            <Link href={`/play/game/${FirstUrl}/${SecondUrl}/${ThirdUrl}`} className="playbox">
+                <i className='fa-solid fa-play'></i>
+            </Link>
+            
+        </div>
+
+    </div>
 )
 }

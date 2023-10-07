@@ -7,6 +7,33 @@ import Link from 'next/link';
 
 export default function Home(props) {
 
+  React.useEffect(() => {
+
+    if (localStorage.getItem('firstload') === 'true') {
+
+      localStorage.setItem('firstload', 'false');
+
+      localStorage.setItem('best', JSON.stringify(
+        {
+          time: '',
+          mistakes: '',
+          correct: '',
+          score: '',
+          mode: ''
+        }));
+  
+        localStorage.setItem('current', JSON.stringify({
+          time: '',
+          mistakes: '',
+          correct: '',
+          score: '',
+          mode: ''
+        }));
+
+    }
+
+  },[]);
+
   const checkdifferent = function(arr) {
     let alldifferent = true;
     for(let i = 0; i < arr.length-1;i++) {
@@ -249,7 +276,7 @@ export default function Home(props) {
       mode: ModeName.toString()
     }));
 
-    if (ScoreRef.current > parseInt(JSON.parse(localStorage.getItem('best')).score) || JSON.parse(localStorage.getItem('best')).score === null) {
+    if (ScoreRef.current > parseInt(JSON.parse(localStorage.getItem('best')).score)) {
       localStorage.setItem('best', JSON.stringify(
       {
         time: (TimeStamp.current).toString(),
