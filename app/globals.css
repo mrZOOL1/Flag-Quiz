@@ -7,7 +7,7 @@
     box-sizing: border-box;
     color: white;
     text-decoration: none;
-    --btn-color: red; 
+    --btn-color: red;
 }
 
 .space {
@@ -16,12 +16,12 @@
     justify-content: center;
     align-items: center;
     width: min(500px, 90%);
-	position: relative;
-	letter-spacing: 0.125em;
-	line-height: 1;
-	color: white;
-	padding: 10px;
-	background: none;
+    position: relative;
+    letter-spacing: 0.125em;
+    line-height: 1;
+    color: white;
+    padding: 10px;
+    background: none;
     border: 2px solid red;
     border-radius: 100px;
     cursor: pointer;
@@ -34,12 +34,12 @@
 .page {
     width: 100vw;
     height: 100vh;
-    background: rgb(60,60,60);
-    background: -moz-linear-gradient(151deg, rgba(60,60,60,1) 0%, rgba(25,25,25,1) 100%);
-    background: -webkit-linear-gradient(151deg, rgba(60,60,60,1) 0%, rgba(25,25,25,1) 100%);
-    background: linear-gradient(151deg, rgba(60,60,60,1) 0%, rgba(25,25,25,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c3c3c",endColorstr="#191919",GradientType=1);
-    display: flex;  
+    background: rgb(60, 60, 60);
+    background: -moz-linear-gradient(151deg, rgba(60, 60, 60, 1) 0%, rgba(25, 25, 25, 1) 100%);
+    background: -webkit-linear-gradient(151deg, rgba(60, 60, 60, 1) 0%, rgba(25, 25, 25, 1) 100%);
+    background: linear-gradient(151deg, rgba(60, 60, 60, 1) 0%, rgba(25, 25, 25, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3c3c3c", endColorstr="#191919", GradientType=1);
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -61,71 +61,6 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-}
-
-.leaderpage .toptitle {
-    margin-bottom: 20px;
-}
-
-.tables {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#firsttable {
-    margin-bottom: 50px;
-}
-
-.leaderboard {
-    height: min(200px, calc(25vh));
-    background-color: rgb(75, 75, 75);
-    width: 1500px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    border: 2px solid red;
-}
-
-.tabletitle {
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    background-color: black;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-bottom: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.toprow {
-    background-color: black;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    height: 50px;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-}
-
-.row {
-    height: 100px;
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(5,1fr);
-}
-
-.column {
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
 }
 
 .mainpage {
@@ -212,7 +147,7 @@
 
 .aa {
     width: 75px;
-    height: 75px;  
+    height: 75px;
 }
 
 .playboxes {
@@ -237,22 +172,23 @@
     cursor: pointer;
 }
 
-main .playbox, .leaderpage .playbox {
+main .playbox,
+.leaderpage .playbox {
     margin-top: 20px;
 }
 
-i {
+.house {
     scale: 2;
 }
 
-.leaderpage i {
-    scale: 1.75;
+.play {
+    scale: 3;
 }
 
 .stats {
     border: 2px solid red;
     height: calc(100vh - 135px);
-    width: min(90%,300px);
+    width: min(90%, 300px);
     background-color: rgb(75, 75, 75);
     margin-top: 20px;
     border-radius: 20px;
@@ -263,7 +199,7 @@ i {
     text-align: center;
 }
 
-.stats > h1 {
+.stats>h1 {
     margin-top: 10px;
 }
 
@@ -288,13 +224,14 @@ i {
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-  }
-  
-  @keyframes correctanimation {
+}
+
+@keyframes correctanimation {
     0% {
         scale: 1;
         color: white;
     }
+
     50% {
         scale: 1.333;
         color: rgb(0, 255, 0);
@@ -312,13 +249,14 @@ i {
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-  }
-  
-  @keyframes wronganimation {
+}
+
+@keyframes wronganimation {
     0% {
         scale: 1;
         color: white;
     }
+
     50% {
         scale: 1.333;
         color: rgb(255, 0, 0);
@@ -406,7 +344,7 @@ i {
     .settings {
         justify-content: space-evenly;
     }
-    
+
     .generalsettings {
         position: relative;
     }
@@ -418,12 +356,12 @@ i {
     .answer p {
         font-size: 1.2rem;
     }
-    
+
 }
 
 @media (max-height:350px) {
 
-    .stats > h1 {
+    .stats>h1 {
         font-size: 1rem;
     }
 
@@ -452,13 +390,13 @@ i {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 * {
@@ -469,10 +407,19 @@ input[type=number] {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-user-select: none; /* Safari 3.1+ */ -moz-user-select: none; /* Firefox 2+ */ -ms-user-select: none; /* IE 10+ */ user-select: none; /* Standard syntax */ -webkit-user-drag: none;
+    -webkit-user-select: none;
+    /* Safari 3.1+ */
+    -moz-user-select: none;
+    /* Firefox 2+ */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
+    -webkit-user-drag: none;
     user-select: none;
     -webkit-user-drag: none;
 }
+
 *:focus {
     outline: none !important;
 }
@@ -483,27 +430,27 @@ input[type=number] {
 ::-webkit-scrollbar {
     border-radius: 10px;
     width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background: black;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: gray;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: red;
-  }
+}
 
-  nextjs-portal {
+nextjs-portal {
     display: none;
-  }
+}
 
-  input[type="range"] {
+input[type="range"] {
     accent-color: red;
-  }
+}

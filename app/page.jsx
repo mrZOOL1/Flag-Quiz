@@ -12,7 +12,6 @@ const page = () => {
       <div className="menu">
 
         <Link className="space" href='/play'>Play</Link>
-        <Link className="space" href='/statistics'>Statistics</Link>
 
       </div>
 
